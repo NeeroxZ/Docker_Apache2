@@ -1,0 +1,51 @@
+docker pull ubuntu
+docker run -it ubuntu bash		| it für interaktiv
+
+ls
+uname
+
+touch i-was-here
+
+exit
+
+
+und das gleiche nochmal
+
+
+docker images 	| um alle images anzuzeigen
+
+docker run -it ubuntu:20.10 bash		:-i interactive  -t erzeugt Pseudoterminal
+
+docker run -d nginx.1.21.4 
+docker ps
+
+zufäliige namen aus einem adjektiv und einem substaniven
+
+docker logs stange_buck
+
+docker run -d --name webserver nginx
+
+docker ps -a
+
+
+docker stop id
+
+docker kill id
+
+docker rm id		zum aufräumen von container
+
+docker rmi 	imageanme
+
+docker system prune --all --volumes
+
+
+docker run -d --name webserver -p 3000:80 nginx
+
+-e für umgebunsvariablen
+-v volumes weitergeben
+
+
+docker-compose kill
+
+docker-compose up -d
+

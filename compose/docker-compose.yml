@@ -1,0 +1,28 @@
+services:
+  api:
+    build: ./api
+    ports:
+      - 3000:3000
+    #profiles:
+     # -api
+    #networks:
+     # -test
+
+
+  ui:
+    image: nginx
+    ports:
+      - 4000:80
+    volumes:
+      - ./ui:/usr/share/nginx/html:ro
+    #profiles:
+     # - ui
+    #networks:
+     # -test
+    depends_on:
+      - api
+
+#  networks:
+ #   test:
+  #    driver: bridge
+   #   attachable: false
